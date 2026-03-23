@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./index.css"/>
+        <title>Quizlet Maker</title>
+        <style>
+            html, body {
+                min-width: 350px;
+                min-height: 400px;
+                width: 350px;
+                height: 400px;
+                box-sizing: border-box;
+            }
+            main {
+                min-width: 320px;
+                max-width: 400px;
+                margin: 0 auto;
+            }
+        </style>
+</head>
+<body>
+    <main>
+        <h1>Quizlet Maker</h1>
+        <textarea id="definitions" placeholder="Enter your definitions here..."></textarea>
+        <button type="button" id="create" tabindex="0">Create Quizlet</button>
+        <p id="response"></p>
+        <p id="test"></p>
+    </main>
+    <script src="index.js"></script>
+</body>
+</html>

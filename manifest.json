@@ -1,0 +1,34 @@
+{
+  "manifest_version": 3,
+  "name": "Quizlet Maker",
+  "version": "1.0.0",
+  "description": "Create Quizlet sets from text input and auto-fill Quizlet.com.",
+  "permissions": [
+    "tabs",
+    "storage",
+    "scripting"
+  ],
+  "host_permissions": [
+    "https://quizlet.com/create-set*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "index.html",
+    "default_title": "Quizlet Maker"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["index.css"],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://quizlet.com/create-set*"],
+      "js": ["index.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
